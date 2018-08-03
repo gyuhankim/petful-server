@@ -9,6 +9,7 @@ const { PORT, CLIENT_ORIGIN } = require('./config');
 // const {dbConnect} = require('./db-knex');
 
 const {dogs, cats} = require('./db/queue');
+const {generateAnimal} = require('./generateAnimal');
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.get('/api/cat', (req, res) => {
 
 app.delete('/api/cat', (req, res) => {
   cats.dequeue();
+  cats.enqueue(generateAnimal('cat'));
   res.send(cats.peek());
   res.status(204);
 });
@@ -49,6 +51,7 @@ app.get('/api/dog', (req, res) => {
 
 app.delete('/api/dog', (req, res) => {
   dogs.dequeue();
+  dogs.enqueue(generateAnimal('dog'));
   res.send(dogs.peek());
   res.status(204);
 });
