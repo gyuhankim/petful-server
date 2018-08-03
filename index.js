@@ -35,7 +35,8 @@ app.get('/api/cat', (req, res) => {
 });
 
 app.delete('/api/cat', (req, res) => {
-  res.send(cats.dequeue());
+  cats.dequeue();
+  res.send(cats.peek());
   res.status(204);
 });
 
@@ -47,7 +48,8 @@ app.get('/api/dog', (req, res) => {
 });
 
 app.delete('/api/dog', (req, res) => {
-  res.send(dogs.dequeue());
+  dogs.dequeue();
+  res.send(dogs.peek());
   res.status(204);
 });
 
