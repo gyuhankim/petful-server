@@ -40,6 +40,11 @@ class Queue {
     }
     return node.value;
   }
+
+  peek() {
+    console.log(this.first.value.name);
+    return this.first.value;
+  }
 }
 
 // CATS //
@@ -55,6 +60,18 @@ cats.enqueue(
     age: 2,
     breed: 'Bengal',
     story: 'Thrown on the street'
+  }
+);
+
+cats.enqueue(
+  {
+    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+    imageDescription: 'A not so enthusiastic Tabby.',
+    name: 'Spotty',
+    sex: 'Female',
+    age: 3,
+    breed: 'Tabby',
+    story: 'Chased bird out of town.'
   }
 );
 
@@ -75,5 +92,19 @@ dogs.enqueue(
   }
 );
 
+dogs.enqueue(
+  {
+    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageDescription: 'An over-eager Labradoodle',
+    name: 'Poseidon',
+    sex: 'Male',
+    age: 5,
+    breed: 'Labradoodle',
+    story: 'Ran Away From Home'
+  }
+);
+
 // console.log(cats);
-console.log(dogs);
+dogs.peek();
+
+module.exports = {dogs, cats};
