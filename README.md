@@ -7,8 +7,8 @@ therefore pets may only be adoptable in a first-in, first-out order.
 ### Live
 [Petful](https://fierce-escarpment-91595.herokuapp.com/ "Petful")
 
-### Server Repo
-[Petful Server Repo](https://github.com/gyuhankim/petful-server "Petful Server Repo")
+### Client Repo
+[Petful Client Repo](https://github.com/gyuhankim/petful-client "Petful Client Repo")
 
 ### Tech Stack
 #### Front End:
@@ -27,7 +27,3 @@ therefore pets may only be adoptable in a first-in, first-out order.
 
 ### Server API Consumption
 * Endpoint ```/api/cat``` & ```/api/dog``` to get JSON data of associated cat and dog.
-
-# Screenshots
-
-![alt text](screenshots/ss1.png "Dashboard.js View")
